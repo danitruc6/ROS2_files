@@ -49,6 +49,10 @@ npm and nodejs
 autocompletion
 sudo apt install bash-completion
 
+or use antigen as a pluging manager for zsh
+installation
+curl -L git.io/antigen > antigen.zsh
+
 
 lines added to .zshrc:
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.zsh
@@ -62,3 +66,25 @@ source ~/ros2_ws/install/setup.zsh
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+
+source ~/antigen.zsh
+
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
+
+# Bundles from the default repo (oh-my-zsh)
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle docker
+
+# Load bundles from external repos
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Select theme
+antigen theme robbyrussell
+
+# Tell Antigen that you're done
+antigen apply
