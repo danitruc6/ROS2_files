@@ -44,7 +44,11 @@ btop
 sudo apt install btop
 
 npm and nodejs
-
+cd ~
+curl -sL https://deb.nodesource.com/setup_20.x -o /tmp/nodesource_setup.sh
+sudo bash /tmp/nodesource_setup.sh
+sudo apt install nodejs
+sudo npm install -g npm@latest
 
 autocompletion
 sudo apt install bash-completion
