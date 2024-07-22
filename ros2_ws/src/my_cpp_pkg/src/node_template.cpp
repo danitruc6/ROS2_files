@@ -1,10 +1,11 @@
 #include "rclcpp/rclcpp.hpp"
  
-class MyCustomNode : public rclcpp::Node // MODIFY NAME
+class RobotNewsStationNode : public rclcpp::Node 
 {
 public:
-    MyCustomNode() : Node("node_name") // MODIFY NAME
+    RobotNewsStationNode() : Node("robot_news_station") 
     {
+
     }
  
 private:
@@ -13,7 +14,7 @@ private:
 int main(int argc, char **argv)
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<MyCustomNode>(); // MODIFY NAME
+    auto node = std::make_shared<RobotNewsStationNode>(); 
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
