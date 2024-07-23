@@ -1,9 +1,9 @@
 #include "rclcpp/rclcpp.hpp"
  
-class RobotNewsStationNode : public rclcpp::Node 
+class MyCustomNode : public rclcpp::Node 
 {
 public:
-    RobotNewsStationNode() : Node("robot_news_station") 
+    MyCustomNode() : Node("node_name") 
     {
 
     }
@@ -14,7 +14,7 @@ private:
 int main(int argc, char **argv)
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<RobotNewsStationNode>(); 
+    auto node = std::make_shared<MyCustomNode>(); 
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
