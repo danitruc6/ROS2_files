@@ -1,7 +1,9 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.8...3.15)
 project(my_robot_interfaces)
 
-cmake_policy(SET CMP0148 NEW)  # Suppress warnings related to FindPythonInterp and FindPythonLibs
+if(POLICY CMP0148) 
+  cmake_policy(SET CMP0148 OLD) 
+endif()
 
 
 if(NOT CMAKE_CXX_STANDARD)
@@ -18,6 +20,12 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/HardwareStatus.msg"
+  "srv/ComputeRectangleArea.srv"
+  "msg/LedPanelState.msg"
+  "srv/SetLed.srv"
+  "msg/Turtle.msg"
+  "msg/TurtleArray.msg"
+  "srv/CatchTurtle.srv"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

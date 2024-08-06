@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/ros/urdfdom/master/xsd/urdf.xsd"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <gazebo reference="left_wheel_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="right_wheel_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="caster_wheel_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+</robot>
+
