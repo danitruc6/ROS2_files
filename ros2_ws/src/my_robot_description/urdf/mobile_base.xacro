@@ -101,5 +101,4 @@
     <child link="base_link" />
     <origin xyz="0 0 ${wheel_radius}" rpy=" 0 0 0" />
   </joint>
-
 </robot>
